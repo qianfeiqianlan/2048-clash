@@ -166,11 +166,9 @@ class ApiClient {
         throw new Error("Login response格式错误");
       }
     } catch (error) {
-      
       let errorMessage = "Login failed";
 
       if (error.response) {
-        
         const status = error.response.status;
         switch (status) {
           case 400:
@@ -186,10 +184,8 @@ class ApiClient {
             errorMessage = `请求失败 (${status})`;
         }
       } else if (error.request) {
-        
         errorMessage = "网络连接失败，请检查网络设置";
       } else {
-        
         errorMessage = error.message || "未知错误";
       }
 
@@ -284,11 +280,9 @@ class ApiClient {
         };
       }
     } catch (error) {
-      
       let errorMessage = "分数上传失败";
 
       if (error.response) {
-        
         const status = error.response.status;
         switch (status) {
           case 400:
@@ -304,10 +298,8 @@ class ApiClient {
             errorMessage = `分数上传失败 (${status})`;
         }
       } else if (error.request) {
-        
         errorMessage = "网络连接失败，请检查网络设置";
       } else {
-        
         errorMessage = error.message || "未知错误";
       }
 
@@ -380,11 +372,9 @@ class ApiClient {
         };
       }
     } catch (error) {
-      
       let errorMessage = "批量分数上传失败";
 
       if (error.response) {
-        
         const status = error.response.status;
         switch (status) {
           case 400:
@@ -400,10 +390,8 @@ class ApiClient {
             errorMessage = `批量分数上传失败 (${status})`;
         }
       } else if (error.request) {
-        
         errorMessage = "网络连接失败，请检查网络设置";
       } else {
-        
         errorMessage = error.message || "未知错误";
       }
 
@@ -454,11 +442,9 @@ class ApiClient {
         };
       }
     } catch (error) {
-      
       let errorMessage = "获取用户分数失败";
 
       if (error.response) {
-        
         const status = error.response.status;
         switch (status) {
           case 400:
@@ -477,10 +463,8 @@ class ApiClient {
             errorMessage = `获取用户分数失败 (${status})`;
         }
       } else if (error.request) {
-        
         errorMessage = "网络连接失败，请检查网络设置";
       } else {
-        
         errorMessage = error.message || "未知错误";
       }
 
@@ -521,11 +505,9 @@ class ApiClient {
         };
       }
     } catch (error) {
-      
       let errorMessage = "Failed to get leaderboard";
 
       if (error.response) {
-        
         const status = error.response.status;
         switch (status) {
           case 400:
@@ -538,10 +520,8 @@ class ApiClient {
             errorMessage = `Failed to get leaderboard (${status})`;
         }
       } else if (error.request) {
-        
         errorMessage = "网络连接失败，请检查网络设置";
       } else {
-        
         errorMessage = error.message || "未知错误";
       }
 
