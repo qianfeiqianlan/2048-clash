@@ -1,6 +1,5 @@
 export const translations = {
   zh: {
-    
     loading: "正在加载...",
     processing: "处理中...",
     error: "错误",
@@ -65,6 +64,8 @@ export const translations = {
     switchToChinese: "切换到中文",
     chinese: "中文",
     english: "English",
+    settings: "设置",
+    language: "语言",
 
     legend: "Legend",
     master: "Master",
@@ -157,6 +158,8 @@ export const translations = {
     switchToChinese: "切换到中文",
     chinese: "中文",
     english: "English",
+    settings: "Settings",
+    language: "Language",
 
     // Levels
     legend: "Legend",

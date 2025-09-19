@@ -12,8 +12,22 @@ function App() {
   const [activeTab, setActiveTab] = useState("game");
   const [isLoading, setIsLoading] = useState(true);
   const [language, setLanguage] = useState(() => {
-    
-    return localStorage.getItem("app-language") || "zh";
+    // 首先检查本地存储是否有保存的语言设置
+    const savedLanguage = localStorage.getItem("app-language");
+    if (savedLanguage) {
+      return savedLanguage;
+    }
+
+    // 如果没有保存的设置，则使用浏览器默认语言
+    const browserLanguage =
+      navigator.language || navigator.languages[0] || "zh";
+
+    // 检测是否为中文相关语言
+    if (browserLanguage.startsWith("zh")) {
+      return "zh";
+    } else {
+      return "en";
+    }
   });
 
   useEffect(() => {
@@ -50,7 +64,7 @@ function App() {
         console.log("Login successful:", result.data);
       } else {
         console.error("Login failed:", result.message);
-        
+
         alert(`Login failed: ${result.message}`);
       }
     } catch (error) {

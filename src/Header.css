@@ -111,6 +111,31 @@
 .header-actions {
   display: flex;
   align-items: center;
+  gap: 20px;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  color: #a0a0a0;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.github-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.github-icon {
+  transition: transform 0.2s ease;
+}
+
+.github-link:hover .github-icon {
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -122,6 +147,14 @@
   
   .header-center {
     max-width: 300px;
+  }
+  
+  .header-actions {
+    gap: 15px;
+  }
+  
+  .github-link {
+    padding: 6px;
   }
   
   .logo-icon {
@@ -163,5 +196,10 @@
   
   .header-actions {
     order: 2;
+    gap: 12px;
+  }
+  
+  .github-link {
+    padding: 5px;
   }
 }
